@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mis 15</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap" rel="stylesheet">
+
+<style>
+
+/* ===== GENERAL ===== */
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+text-align:center;
+scroll-behavior:smooth;
+color:#000000;
+}
+
+section{
+padding:90px 20px;
+}
+
+/* ===== PORTADA ===== */
+
+.hero{
+height:100vh;
+background:url("portada.jpg") center/cover no-repeat;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+color:black;
+}
+
+.hero h1{
+font-size:48px;
+letter-spacing:5px;
+margin:0;
+}
+
+.countdown{
+display:flex;
+gap:40px;
+margin-top:20px;
+font-size:22px;
+}
+
+/* ===== SECCIONES ===== */
+
+.light{
+background:#CBC3E3;
+}
+
+.pink{
+background:#F8C8DC;
+color:white;
+}
+
+.container{
+max-width:700px;
+margin:auto;
+}
+
+/* ===== BOTONES ===== */
+
+.btn{
+padding:12px 28px;
+border:1px solid currentColor;
+background:purple;
+cursor:pointer;
+margin-top:20px;
+transition:.3s;
+}
+
+.btn:hover{
+background:white;
+color:#F8C8DC;
+}
+
+/* ===== ICONOS ===== */
+
+.icon{
+font-size:40px;
+margin-bottom:10px;
+}
+
+/* ===== VALOR TARJETA ===== */
+
+.valor-tarjeta{
+text-align:center;
+padding:60px 20px;
+background:#fff0f5;
+}
+
+.valor-tarjeta h2{
+font-size:32px;
+margin-bottom:25px;
+}
+
+.precio-box{
+background:white;
+display:inline-block;
+padding:30px 50px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,0.1);
+}
+
+.texto{
+font-size:18px;
+margin-bottom:10px;
+color:#555;
+}
+
+.precio{
+font-size:40px;
+font-weight:bold;
+color:#e91e63;
+}
+
+/* ===== TELEFONOS ===== */
+
+.telefonos{
+margin-top:30px;
+}
+
+.telefono{
+display:block;
+margin:10px auto;
+padding:12px;
+max-width:300px;
+border:1px solid #444;
+text-decoration:none;
+color:#444;
+border-radius:8px;
+transition:0.3s;
+}
+
+.telefono:hover{
+background:white;
+color:#b5838d;
+}
+
+/* ===== FOOTER ===== */
+
+.footer{
+background:#222;
+color:white;
+padding:40px;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- PORTADA -->
+<section class="hero">
+<h1>MIS 15 PRISCILA</h1>
+
+<div class="countdown">
+<div><span id="d">0</span><br>DÍAS</div>
+<div><span id="h">0</span><br>HORAS</div>
+<div><span id="m">0</span><br>MIN</div>
+<div><span id="s">0</span><br>SEG</div>
+</div>
+</section>
+
+<!-- FECHA -->
+<section class="light">
+<div class="container">
+<div class="icon">📅</div>
+<h2>¿CUÁNDO?</h2>
+<p>23 de Mayo — 21:30 hs</p>
+</div>
+</section>
+
+<!-- LUGAR -->
+<section>
+<div class="container">
+<div class="icon">📍</div>
+<h2>¿DÓNDE?</h2>
+<p>Salón Zenón Eventos</p>
+
+<button class="btn"
+onclick="window.open('https://maps.app.goo.gl/M14CWjMpeiPpgPi99')">
+CÓMO LLEGAR
+</button>
+</div>
+</section>
+
+<!-- DRESS CODE -->
+<section class="light">
+<div class="container">
+<div class="icon">👗</div>
+<h2>DRESS CODE</h2>
+<p>Elegante Sport</p>
+</div>
+</section>
+
+<!-- REGALOS -->
+<section>
+<div class="container">
+<div class="icon">🎁</div>
+<h2>REGALOS</h2>
+
+<p>
+Nada es más importante que tu presencia,
+pero si deseas hacerme un presente
+podrás hacerlo en mi día especial
+o mediante transferencia.
+</p>
+
+<button class="btn" onclick="mostrarCuenta()">
+VER CUENTA
+</button>
+
+<div id="cuenta" style="display:none; margin-top:20px;">
+<p>
+Alias: pri8.283<br>
+Mercado Pago<br>
+Titular: Priscila Albert
+</p>
+</div>
+</div>
+</section>
+
+<!-- VALOR TARJETA (reemplaza galería) -->
+<section class="valor-tarjeta">
+<h2>Valor de la Tarjeta</h2>
+
+<div class="precio-box">
+<p class="texto">Valor por persona</p>
+<p class="precio">$15.000 ARS</p>
+</div>
+</section>
+
+<!-- CONFIRMAR -->
+<section>
+<div class="container">
+<h2>CONFIRMAR ASISTENCIA</h2>
+
+<button class="btn"
+onclick="window.location.href='https://docs.google.com/forms/d/e/1FAIpQLSdoNNg2LHuvD7YEQQe3T-61vT01IrWc6lWz_uqFKOziFIDvfg/viewform?usp=sharing&ouid=113608798427305246432'">
+CONFIRMAR
+</button>
+
+<div class="telefonos">
+<h3>Contactos</h3>
+
+<p>Podés confirmar asistencia también por teléfono:</p>
+
+<a class="telefono" href="https://wa.me/5493518762138" target="_blank">
+📱 Analía Allamano — 351 8762138
+</a>
+
+<a class="telefono" href="https://wa.me/5493572595260" target="_blank">
+📱 Priscila Albert — 3572 595260
+</a>
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<section class="footer">
+<p>Te espero para compartir una noche inolvidable ✨</p>
+</section>
+
+<script>
+
+/* ===== CUENTA REGRESIVA ===== */
+
+const fecha = new Date("May 23, 2026 21:30:00").getTime();
+
+setInterval(()=>{
+
+let ahora = new Date().getTime();
+let dif = fecha - ahora;
+
+document.getElementById("d").innerHTML =
+Math.floor(dif/(1000*60*60*24));
+
+document.getElementById("h").innerHTML =
+Math.floor((dif%(1000*60*60*24))/(1000*60*60));
+
+document.getElementById("m").innerHTML =
+Math.floor((dif%(1000*60*60))/(1000*60));
+
+document.getElementById("s").innerHTML =
+Math.floor((dif%(1000*60))/1000);
+
+},1000);
+
+/* BOTON REGALO */
+
+function mostrarCuenta(){
+document.getElementById("cuenta").style.display="block";
+}
+
+</script>
+
+</body>
+</html>
